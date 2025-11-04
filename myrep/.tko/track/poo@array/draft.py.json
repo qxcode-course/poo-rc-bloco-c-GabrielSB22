@@ -1,0 +1,184 @@
+{
+    "patches": [
+        {
+            "label": "2025-11-04_13-23-34",
+            "content": "@@ -30,8 +30,5 @@\n eros\n-%5B1%5D\n )\n",
+            "lines": "2"
+        },
+        {
+            "label": "2025-11-04_13-23-51",
+            "content": "@@ -1,12 +1,4 @@\n-ai = %5B%5D%0A\n nume\n@@ -17,51 +17,21 @@\n  3%5D%0A\n-fruta = list(%22ma%C3%A7a, banana, uva%22)%0Aprint (fruta\n+print(numeros%5B1%5D\n )\n",
+            "lines": "2"
+        },
+        {
+            "label": "2025-11-04_13-26-23",
+            "content": "@@ -43,22 +43,18 @@\n ma%C3%A7a\n-%22\n , \n-%22\n banana\n-%22\n , \n-%22\n uva%22\n",
+            "lines": "4"
+        },
+        {
+            "label": "2025-11-04_13-27-08",
+            "content": "@@ -40,16 +40,17 @@\n t(%22ma%C3%A7a%22\n+,\n  %22banana\n@@ -50,16 +50,17 @@\n %22banana%22\n+,\n  %22uva%22)%0A\n",
+            "lines": "4"
+        },
+        {
+            "label": "2025-11-04_13-27-18",
+            "content": "@@ -38,16 +38,14 @@\n ist(\n-%5B\n %22ma%C3%A7a%22\n-,\n  %22ba\n@@ -53,16 +53,14 @@\n ana%22\n-,\n  %22uva%22\n-%5D\n )%0Apr\n",
+            "lines": "4"
+        },
+        {
+            "label": "2025-11-04_13-28-54",
+            "content": "@@ -1,24 +1,31 @@\n-fruta.append(%22pera%22)\n+ai = %5B%5D%0Anumeros = %5B1, 2, 3%5D\n %0Afru\n@@ -78,6 +78,4 @@\n uta)\n-%0A%0A\n",
+            "lines": "4"
+        },
+        {
+            "label": "2025-11-04_13-33-01",
+            "content": "@@ -1,12 +1,33 @@\n+fruta.append(%22pera%22)%0A\n fruta = list\n@@ -54,37 +54,16 @@\n %22uva%22%5D)%0A\n-fruta.append(%22pera%22)%0A\n print (f\n",
+            "lines": "4"
+        },
+        {
+            "label": "2025-11-04_13-33-22",
+            "content": "@@ -58,31 +58,8 @@\n a%22)%0A\n-fruta.remove(%22banana%22)%0A\n prin\n",
+            "lines": "4"
+        },
+        {
+            "label": "2025-11-04_13-34-26",
+            "content": "@@ -81,32 +81,8 @@\n a%22)%0A\n-fruta.insert(0, %22caju%22)%0A\n prin\n@@ -91,8 +91,9 @@\n (fruta)%0A\n+%0A\n",
+            "lines": "5"
+        },
+        {
+            "label": "2025-11-04_13-37-19",
+            "content": "@@ -105,21 +105,8 @@\n u%22)%0A\n-fruta.pop(1)%0A\n prin\n",
+            "lines": "5"
+        },
+        {
+            "label": "2025-11-04_13-38-46",
+            "content": "@@ -105,16 +105,8 @@\n u%22)%0A\n-valor = \n frut\n@@ -118,21 +118,8 @@\n (1)%0A\n-print(valor)%0A\n prin\n",
+            "lines": "6"
+        },
+        {
+            "label": "2025-11-04_13-39-53",
+            "content": "@@ -1,140 +1,139 @@\n-fruta = list(%5B%22ma%C3%A7a%22, %22banana%22, %22uva%22%5D)%0Afruta.append(%22pera%22) #adiciona no ultimo%0Afruta.remove(%22banana%22) #remove %0Afruta.insert(0, %22caju%22)\n+@@ -57,28 +57,8 @@%0A ra%2522)%0A- #adiciona no ultimo%0A %250Afru%0A@@ -80,17 +80,8 @@%0A na%2522)%0A- #remove %0A %250Afru%0A@@ -104,112 +104,29 @@%0A ju%2522)%0A-\n  #co\n@@ -152,13 +152,25 @@\n posi\n-%C3%A7%C3%A3o %0A\n+%25C3%25A7%25C3%25A3o %250A\n valo\n@@ -205,17 +205,19 @@\n a o \n-%22\n+%2522\n removido\n %22, p\n@@ -212,17 +212,19 @@\n removido\n-%22\n+%2522\n , podend\n@@ -242,50 +242,91 @@\n  dps\n-%0A(%22%22).join(fruta)%0Aprint(valor)%0Aprint (fruta)%0A\n+%250A(%2522%2522).join%0A+%250Avalor = fruta.pop(1)%0A %250Apri%0A@@ -149,9 +149,8 @@%0A (fruta)%250A%0A-%250A\n %0A\n",
+            "lines": "16"
+        },
+        {
+            "label": "2025-11-04_13-48-58",
+            "content": "@@ -1,277 +1,41 @@\n-fruta = list(%5B%22ma%C3%A7a%22, %22banana%22, %22uva%22%5D)%0Afruta.append(%22pera%22) #adiciona no ultimo%0Afruta.remove(%22banana%22) #remove %0Afruta.insert(0, %22caju%22) #coloca em uma posi%C3%A7%C3%A3o %0Avalor = fruta.pop(1) #ele retorna o %22removido%22, podendo pegar ele dps%0A(%22_%22).join(fruta)%0Aprint(valor)%0Aprint (fruta)%0A\n+@@ -230,9 +230,8 @@%0A s%250A(%2522%0A-_%0A %2522).j\n %0A\n",
+            "lines": "4"
+        },
+        {
+            "label": "2025-11-04_13-49-18",
+            "content": "@@ -228,18 +228,13 @@\n dps%0A\n-aiai = %22-%22\n+(%22_%22)\n .joi\n",
+            "lines": "9"
+        },
+        {
+            "label": "2025-11-04_13-50-20",
+            "content": "@@ -1,16 +1,21 @@\n fruta = \n+list(\n %5B%22ma%C3%A7a%22,\n@@ -31,16 +31,17 @@\n , %22uva%22%5D\n+)\n %0Afruta.a\n",
+            "lines": "9"
+        },
+        {
+            "label": "2025-11-04_13-50-43",
+            "content": "@@ -245,20 +245,8 @@\n ta)%0A\n-print(aiai)%0A\n prin\n",
+            "lines": "9"
+        },
+        {
+            "label": "2025-11-04_13-51-09",
+            "content": "@@ -226,16 +226,17 @@\n aiai = %22\n+-\n %22.join(f\n@@ -244,48 +244,8 @@\n uta)\n- #separa os elementos da lista com algo \n %0Apri\n",
+            "lines": "10"
+        },
+        {
+            "label": "2025-11-04_13-51-32",
+            "content": "@@ -31,73 +31,8 @@\n a%22%5D%0A\n-numeros = %5B%5D%0Afor i in range (0, 11):%0A    numeros.append(i)%0A    %0A%0A\n frut\n@@ -283,22 +283,8 @@\n lgo \n-ou junto tudo%0A\n %0Apri\n",
+            "lines": "10"
+        },
+        {
+            "label": "2025-11-04_13-54-37",
+            "content": "@@ -86,16 +86,20 @@\n pend(i)%0A\n+    \n %0A%0Afruta.\n@@ -402,19 +402,5 @@\n ta)%0A\n-print(numeros)\n %0A\n",
+            "lines": "16"
+        },
+        {
+            "label": "2025-11-04_13-54-56",
+            "content": "@@ -60,54 +60,15 @@\n ge (\n-%220%22\n+0\n , \n-%22\n 11\n-%22\n ):\n- #cria elementos em um array vazio \n %0A   \n",
+            "lines": "16"
+        },
+        {
+            "label": "2025-11-04_13-56-03",
+            "content": "@@ -60,13 +60,17 @@\n ge (\n-0\n+%220%22\n , \n+%22\n 11\n+%22\n ): #\n@@ -106,25 +106,8 @@\n zio \n-(apenas numeros) \n %0A   \n",
+            "lines": "16"
+        },
+        {
+            "label": "2025-11-04_13-56-22",
+            "content": "@@ -1,24 +1,4 @@\n-import numpy as np%0A%0A\n frut\n@@ -44,49 +44,8 @@\n  %5B%5D%0A\n-%0A%0Arandola = np.random.randint(1, 10, 6)%0A%0A\n for \n@@ -116,16 +116,16 @@\n meros) %0A\n-\n     nume\n@@ -139,16 +139,17 @@\n end(i)%0A%0A\n+%0A\n fruta.ap\n@@ -465,18 +465,4 @@\n os)%0A\n-print(randola)\n",
+            "lines": "16"
+        },
+        {
+            "label": "2025-11-04_14-02-55",
+            "content": "@@ -62,17 +62,16 @@\n  = %5B%5D%0A%0A%0A\n-%0A\n randola \n@@ -101,50 +101,10 @@\n 10, \n-9) #cria elementos aleatorios em uma lista\n+6)\n %0A%0Afo\n",
+            "lines": "22"
+        },
+        {
+            "label": "2025-11-04_14-09-17",
+            "content": "@@ -65,29 +65,8 @@\n %5B%5D%0A%0A\n-primeiro = fruta(%5B1%5D)\n %0A%0Ara\n@@ -580,20 +580,4 @@\n ola)\n-%0Aprint(primeiro)\n",
+            "lines": "23"
+        },
+        {
+            "label": "2025-11-04_14-11-10",
+            "content": "@@ -598,8 +598,23 @@\n andola)%0A\n+print(primeiro)\n",
+            "lines": "24"
+        },
+        {
+            "label": "2025-11-04_14-11-38",
+            "content": "@@ -61,16 +61,37 @@\n s = %5B%5D%0A%0A\n+primeiro = fruta(%5B1%5D)\n %0A%0Arandol\n",
+            "lines": "23"
+        },
+        {
+            "label": "2025-11-04_14-11-43",
+            "content": "@@ -65,27 +65,8 @@\n %5B%5D%0A%0A\n-primeiro = fruta%5B1%5D\n %0A%0Ara\n",
+            "lines": "23"
+        },
+        {
+            "label": "2025-11-04_14-12-19",
+            "content": "@@ -600,19 +600,4 @@\n la)%0A\n-print(primeiro)\n",
+            "lines": "23"
+        },
+        {
+            "label": "2025-11-04_14-12-30",
+            "content": "@@ -63,43 +63,8 @@\n = %5B%5D\n-%0Achacha = %5B%22gato%22, %22fofa%22, %22cinza%22%5D\n %0A%0Apr\n@@ -76,13 +76,12 @@\n o = \n-chach\n+frut\n a%5B1%5D\n",
+            "lines": "24"
+        },
+        {
+            "label": "2025-11-04_14-13-57",
+            "content": "@@ -15,52 +15,9 @@\n s np\n- #necessario pra gerar elementos aleatorios\n %0A\n+\n %0Afru\n@@ -100,131 +100,29 @@\n %22%5D%0A%0A\n-for i in chacha:%0A    print(i)%0A%0Aprimeiro = chacha%5B1%5D #torna o elemento de uma lista em uma variavel de acordo com seu indice\n+primeiro = chacha%5B1%5D%0A\n %0Aran\n",
+            "lines": "25"
+        },
+        {
+            "label": "2025-11-04_14-18-44",
+            "content": "@@ -142,29 +142,38 @@\n a%22%5D%0A\n-abc = %5B%22a%22, %22b%22, %22c%22%5D\n+%0Afor i in chacha:%0A    print(i)\n %0A%0Apr\n@@ -796,138 +796,4 @@\n iro)\n-%0A%0Afor i in chacha:%0A    print(i) #print cada elemento da lista%0A%0Afor i, letra in enumerate(abc):%0A    print(f%22indice: %7Bi%7D, letra%7Bletra%7D%22)\n",
+            "lines": "27"
+        },
+        {
+            "label": "2025-11-04_14-25-56",
+            "content": "@@ -908,18 +908,16 @@\n %7D, letra\n-: \n %7Bletra%7D%22\n",
+            "lines": "31"
+        },
+        {
+            "label": "2025-11-04_14-26-13",
+            "content": "@@ -923,325 +923,4 @@\n a%7D%22)\n- #percorre a lista com o indice dos elementos%0A%0Aachado = %5B10, 20, 30, 40, 50%5D%0Aelemento_procurado = 40%0Aencontrado = False%0A%0Afor e in achado:%0A    if e == elemento_procurado:%0A        print(f'elemento %7Belemento_procurado%7D encontrado')%0A        encontrado = True%0A        break%0A    else:%0A        print(%22elemento n%C3%A3o encontrado%22)%0A%0A\n",
+            "lines": "31"
+        },
+        {
+            "label": "2025-11-04_14-42-36",
+            "content": "@@ -789,90 +789,8 @@\n o)%0A%0A\n-#-------------------------------------------------------------------------------#%0A\n for \n@@ -970,88 +970,8 @@\n os%0A%0A\n-#-----------------------------------------------------------------------------#%0A\n acha\n@@ -1151,54 +1151,8 @@\n do')\n- #busca um valor em cada indice usando um la%C3%A7o\n %0A   \n@@ -1243,250 +1243,5 @@\n o%22)%0A\n-#-------------------------------------------------------------------------------#%0Acinema = %5B%22pipopca%22, %22cadeira%22, %22tel%C3%A3o%22, %22luzes%22%5D%0A%0Aif %22cadeira%22 in cinema:%0A    print(%22tem isso no cinema%22)%0A%0Aif %22arma%22 not in cinema:%0A    print(%22n%C3%A3o isso no cinema%22)\n+%0A\n",
+            "lines": "44"
+        },
+        {
+            "label": "2025-11-04_14-49-31",
+            "content": "@@ -1677,20 +1677,16 @@\n nt(%22n%C3%A3o \n-tem \n isso no \n",
+            "lines": "53"
+        },
+        {
+            "label": "2025-11-04_14-49-40",
+            "content": "import numpy as np #necessario pra gerar elementos aleatorios\n\nfruta = [\"ma\u00e7a\", \"banana\", \"uva\"]\nnumeros = []\nchacha = [\"gato\", \"fofa\", \"cinza\"]\nabc = [\"a\", \"b\", \"c\"]\n\nprimeiro = chacha[1] #torna o elemento de uma lista em uma variavel de acordo com seu indice\nrandola = np.random.randint(1, 10, 9) #cria elementos aleatorios em uma lista\n\nfor i in range (0, 11): #cria elementos em um array vazio (apenas numeros) \n    numeros.append(i)\n\nfruta.append(\"pera\") #adiciona no ultimo\nfruta.remove(\"banana\") #remove \nfruta.insert(0, \"caju\") #coloca em uma posi\u00e7\u00e3o \nvalor = fruta.pop(1) #ele retorna o \"removido\", podendo pegar ele dps\naiai = \"\".join(fruta) #separa os elementos da lista com algo ou junto tudo\n\nprint(aiai)\nprint(valor)\nprint (fruta)\nprint(numeros)\nprint(randola)\nprint(primeiro)\n\n#-------------------------------------------------------------------------------#\nfor i in chacha:\n    print(i) #print cada elemento da lista\n\nfor i, letra in enumerate(abc):\n    print(f\"indice: {i}, letra: {letra}\") #percorre a lista com o indice dos elementos\n\n#-----------------------------------------------------------------------------#\nachado = [10, 20, 30, 40, 50]\nelemento_procurado = 40\nencontrado = False\n\nfor e in achado:\n    if e == elemento_procurado:\n        print(f'elemento {elemento_procurado} encontrado') #busca um valor em cada indice usando um la\u00e7o\n        encontrado = True\n        break\n    else:\n        print(\"elemento n\u00e3o encontrado\")\n#-------------------------------------------------------------------------------#\ncinema = [\"pipopca\", \"cadeira\", \"tel\u00e3o\", \"luzes\"]\n\nif \"cadeira\" in cinema:\n    print(\"tem isso no cinema\")\n\nif \"arma\" not in cinema:\n    print(\"n\u00e3o tem isso no cinema\")",
+            "lines": "53"
+        }
+    ]
+}

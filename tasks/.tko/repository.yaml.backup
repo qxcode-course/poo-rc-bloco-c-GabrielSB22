@@ -1,0 +1,29 @@
+version: '0.2'
+sources:
+- database: local
+  link: ''
+  type: local
+  branch: master
+  cache_path: ''
+  cache_timestamp: ''
+  filters: null
+- database: poo
+  link: /workspaces/poo-rc-bloco-c-GabrielSB22/tasks/.tko/cache/poo/Readme.md
+  type: clone
+  branch: master
+  cache_path: /workspaces/poo-rc-bloco-c-GabrielSB22/tasks/.tko/cache/poo/Readme.md
+  cache_timestamp: '2025-11-04 13:16:17'
+  filters:
+  - acesso
+  - simples
+expanded:
+- poo@campanha-principal
+tasks: {}
+flags:
+  quests: 0
+  tracks: 0
+  tasks: 0
+  graph: 0
+  xray: 0
+lang: py
+selected: poo@campanha-principal
