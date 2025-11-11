@@ -1,5 +1,5 @@
 class Pessoa:
-    def __int__(self, nome: str = ""):
+    def __init__(self, nome: str):
         self.__nome = nome
 
     def getNome(self):
@@ -15,7 +15,7 @@ class Market:
 
     def __str__(self):
         cx = ", " .join([str(x) if x else "-----" for x in self.caixas])
-        wait = " , " .join([str(x) for x in self.espera])
+        wait = ", " .join([str(x) for x in self.espera])
         return f"Caixas: [{cx}]\nEspera: [{wait}]"
     
     def arrive(self, person: Pessoa):
@@ -24,12 +24,29 @@ class Market:
     def call(self, index: int):
         if self.espera == []:
             print("fail: sem clientes")
+            return
+        if self.caixas[index] is not None:
+            print("fail: caixa ocupado")
+            return
+        if index < 0 or index >= len(self.caixas):
+            print("index invalido")
+            return
         
+        self.caixas[index] = self.espera.pop(0)
 
+    def finish(self, index: int) -> Pessoa | None:
+        if index < 0 or index >= len(self.caixas):
+            print("fail: caixa inexistente")
+            return
+        if self.caixas[index] is None:
+            print("fail: caixa vazio")
+        aiai = self.caixas[index] = None
+        self.caixas[index] = None
+        return aiai
+    
 def main():
     mercado = Market(0)
-    pers = Pessoa
-    
+
     while True:
         line = input()
         print("$"+line)
@@ -43,6 +60,13 @@ def main():
             q = int(args[1])
             mercado = Market(q)
         elif args[0] == "arrive":
-            pb = Pessoa (args[1])
-            mercado.arrive(pb)
+            a = args[1]
+            mercado.arrive(Pessoa(a))
+        elif args[0] == "call":
+            ind = int(args[1])
+            mercado.call(ind)
+        elif args[0] == "finish":
+            ex = int(args[1])
+            mercado.finish(ex)
+
 main()
