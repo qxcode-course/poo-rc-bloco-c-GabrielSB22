@@ -16,6 +16,7 @@ fruta.remove("banana") #remove
 fruta.insert(0, "caju") #coloca em uma posição 
 valor = fruta.pop(1) #ele retorna o "removido", podendo pegar ele dps
 aiai = "".join(fruta) #separa os elementos da lista com algo ou junto tudo
+del fruta[1] #remove um elemento de uma lista em determinada posição
 
 print(aiai)
 print(valor)

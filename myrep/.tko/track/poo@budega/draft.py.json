@@ -1,0 +1,79 @@
+{
+    "patches": [
+        {
+            "label": "2025-11-11_13-36-45",
+            "content": "@@ -553,357 +553,4 @@\n it%7D%22\n-%0A%0Adef main():%0A    mercado = None%0A%0A    while True:%0A        line = input(%22: %22)%0A        print(%22$%22 + line)%0A        args = list%5Bargs%5D = line.split(%22 %22)%0A%0A        if args%5B0%5D == %22end%22:%0A            break%0A        elif args%5B0%5D == %22show%22:%0A            print(mercado)%0A        elif args%5B0%5D == %22init%22:%0A            q = int(args%5B1%5D)%0A            mercado = Market(q)%0Amain()\n",
+            "lines": "19"
+        },
+        {
+            "label": "2025-11-11_13-44-25",
+            "content": "@@ -664,14 +664,14 @@\n     \n-#\n args\n-:\n+ =\n  lis\n@@ -699,36 +699,8 @@\n %22 %22)\n-%0A        args = line.split()\n %0A%0A  \n",
+            "lines": "36"
+        },
+        {
+            "label": "2025-11-11_13-45-26",
+            "content": "@@ -532,14 +532,12 @@\n as: \n-%5B\n %7Bcx%7D\n-%5D\n %5CnEs\n@@ -546,16 +546,14 @@\n ra: \n-%5B\n %7Bwait%7D\n-%5D\n %22%0A%0Ad\n",
+            "lines": "37"
+        },
+        {
+            "label": "2025-11-11_13-45-56",
+            "content": "@@ -386,16 +386,17 @@\n   cx = %22\n+ \n , %22 .joi\n@@ -404,17 +404,16 @@\n (%5Bstr(x)\n- \n if x els\n",
+            "lines": "37"
+        },
+        {
+            "label": "2025-11-11_13-46-39",
+            "content": "@@ -239,47 +239,8 @@\n t):%0A\n-        self.espera: list%5BPessoa%5D = %5B%5D%0A\n     \n@@ -308,16 +308,55 @@\n caixas)%5D\n+%0A        self.espera: list%5BPessoa%5D = %5B%5D\n %0A%0A    de\n",
+            "lines": "37"
+        },
+        {
+            "label": "2025-11-11_13-47-13",
+            "content": "@@ -651,9 +651,11 @@\n (%22$%22\n-+\n+ + \n line\n",
+            "lines": "37"
+        },
+        {
+            "label": "2025-11-11_13-48-57",
+            "content": "@@ -626,16 +626,17 @@\n input(%22:\n+ \n %22)%0A     \n",
+            "lines": "37"
+        },
+        {
+            "label": "2025-11-11_13-49-17",
+            "content": "@@ -625,16 +625,17 @@\n  input(%22\n+:\n %22)%0A     \n",
+            "lines": "37"
+        },
+        {
+            "label": "2025-11-11_13-49-26",
+            "content": "@@ -557,198 +557,8 @@\n t%7D%5D%22\n-%0A    %0A    def arrive(self, person: Pessoa):%0A        self.espera.append(person)%0A%0A    def call(self, index: int):%0A        if self.espera == %5B%5D:%0A            print(%22fail: sem clientes%22)%0A        \n %0A%0Ade\n",
+            "lines": "37"
+        },
+        {
+            "label": "2025-11-11_13-55-22",
+            "content": "@@ -1118,104 +1118,8 @@\n (q)%0A\n-        elif args%5B0%5D == %22arrive%22:%0A            a = args%5B1%5D%0A            mercado.arrive(Pessoa(a))%0A\n main\n",
+            "lines": "45"
+        },
+        {
+            "label": "2025-11-11_13-57-13",
+            "content": "@@ -772,16 +772,15 @@\n cado\n-: Market\n+ = None\n %0A%0A  \n@@ -842,16 +842,60 @@\n %22+line)%0A\n+        #args: list%5Bargs%5D = line.split(%22 %22)%0A\n         \n",
+            "lines": "48"
+        },
+        {
+            "label": "2025-11-11_14-12-47",
+            "content": "@@ -772,20 +772,16 @@\n cado\n- =\n+:\n  Market\n-(0)\n %0A%0A  \n",
+            "lines": "47"
+        },
+        {
+            "label": "2025-11-11_14-14-42",
+            "content": "@@ -1136,43 +1136,8 @@\n s%5B1%5D\n- %0A            pb = Pessoa (args%5B1%5D)\n %0A   \n@@ -1164,10 +1164,17 @@\n ive(\n-pb\n+Pessoa(a)\n )%0Ama\n",
+            "lines": "47"
+        },
+        {
+            "label": "2025-11-11_14-21-42",
+            "content": "@@ -819,16 +819,18 @@\n = input(\n+%22%22\n )%0A      \n@@ -1109,16 +1109,41 @@\n rrive%22:%0A\n+            a = args%5B1%5D %0A\n         \n",
+            "lines": "48"
+        },
+        {
+            "label": "2025-11-11_14-23-06",
+            "content": "class Pessoa:\n    def __int__(self, nome: str):\n        self.__nome = nome\n\n    def getNome(self):\n        return self.__nome\n    \n    def __str__(self):\n        return f\"{self.__nome}\"\n    \nclass Market:\n    def __init__(self, caixas: int):\n        self.espera: list[Pessoa] = []\n        self.caixas: list[Pessoa | None ] = [None for _ in range(caixas)]\n\n    def __str__(self):\n        cx = \", \" .join([str(x) if x else \"-----\" for x in self.caixas])\n        wait = \" , \" .join([str(x) for x in self.espera])\n        return f\"Caixas: [{cx}]\\nEspera: [{wait}]\"\n    \n    def arrive(self, person: Pessoa):\n        self.espera.append(person)\n\n    def call(self, index: int):\n        if self.espera == []:\n            print(\"fail: sem clientes\")\n        \n\ndef main():\n    mercado = Market(0)\n\n    while True:\n        line = input()\n        print(\"$\"+line)\n        args = line.split()\n\n        if args[0] == \"end\":\n            break\n        elif args[0] == \"show\":\n            print(mercado)\n        elif args[0] == \"init\":\n            q = int(args[1])\n            mercado = Market(q)\n        elif args[0] == \"arrive\":\n            pb = Pessoa (args[1])\n            mercado.arrive(pb)\nmain()",
+            "lines": "47"
+        }
+    ]
+}
