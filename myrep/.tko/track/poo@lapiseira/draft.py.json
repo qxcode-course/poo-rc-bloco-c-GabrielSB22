@@ -1,0 +1,139 @@
+{
+    "patches": [
+        {
+            "label": "2025-11-12_13-26-41",
+            "content": "@@ -346,241 +346,9 @@\n     \n-def __str__(self):%0A        bico = str(self.bico) if self.bico else %22%5B%5D%22%0A        tambor = %22%22.join(str(g)for g in self.tambor)%0A        tambor = f%22%3C%7Btambor%7D%3E%22%0A        return f%22calibre: %7Bself.calibre%7D, bico:%5B%7Bbico%7D%5D, tambor: %3C%7Btambor%7D%3E%22\n %0A\n+\n %0A   \n@@ -375,21 +375,16 @@\n    lap =\n- None\n %0A%0A    wh\n@@ -562,16 +562,16 @@\n %22show%22:%0A\n-\n         \n@@ -584,16 +584,42 @@\n int(lap)\n+%0A        elif args%5B0%5D ==  \n %0A%0Amain()\n",
+            "lines": "35"
+        },
+        {
+            "label": "2025-11-12_13-38-02",
+            "content": "@@ -689,16 +689,28 @@\n     args\n+: list%5Bargs%5D\n  = line.\n@@ -715,16 +715,18 @@\n e.split(\n+%22%22\n )%0A%0A     \n",
+            "lines": "38"
+        },
+        {
+            "label": "2025-11-12_13-39-19",
+            "content": "@@ -172,122 +172,8 @@\n ho%0A%0A\n-    def __str__(self):%0A        return f%22calibre: %7Bself.calibre%7D: dureza: %7Bself.dureza%7D: tamanho: %7Bself.tamanho%7D%22%0A%0A\n clas\n",
+            "lines": "38"
+        },
+        {
+            "label": "2025-11-12_13-41-28",
+            "content": "@@ -722,18 +722,20 @@\n   lap = \n-oi\n+None\n %0A%0A    wh\n",
+            "lines": "41"
+        },
+        {
+            "label": "2025-11-12_13-41-56",
+            "content": "@@ -722,20 +722,18 @@\n   lap = \n-None\n+oi\n %0A%0A    wh\n@@ -924,101 +924,8 @@\n ap)%0A\n-        elif args%5B0%5D == %22init%22:%0A            z = float(args%5B1%5D)%0A            lap = Lapiseira(z)\n %0Amai\n",
+            "lines": "41"
+        },
+        {
+            "label": "2025-11-12_13-44-44",
+            "content": "@@ -663,14 +663,16 @@\n ico:\n+%5B\n %7Bbico%7D\n+%5D\n , ta\n@@ -677,24 +677,25 @@\n tambor: \n+%3C\n %7Btambor%7D\n %22%0A%0A    %0A\n@@ -686,16 +686,17 @@\n %7Btambor%7D\n+%3E\n %22%0A%0A    %0A\n",
+            "lines": "43"
+        },
+        {
+            "label": "2025-11-12_13-45-44",
+            "content": "@@ -659,17 +659,16 @@\n %7D, bico:\n- \n %7Bbico%7D, \n",
+            "lines": "43"
+        },
+        {
+            "label": "2025-11-12_13-46-03",
+            "content": "@@ -695,200 +695,11 @@\n     \n-def inserir(self, graf: Grafite):%0A        if self.calibre != self.calibre:%0A            print(%22fail: calibre incompativel%22)%0A            return%0A        else:%0A            self.tambor.append(graf)\n+%0A%0A%0A\n %0A%0A%0Ad\n@@ -974,32 +974,32 @@\n  float(args%5B1%5D)%0A\n+\n             lap \n@@ -1017,219 +1017,8 @@\n (z)%0A\n-        elif args%5B0%5D == %22insert%22:%0A            calibre = float(args%5B1%5D)%0A            dureza = args%5B2%5D%0A            tamanho = int(args%5B3%5D)%0A%0A            gra = Grafite(calibre, dureza, tamanho)%0A            print(gra)%0A\n main\n",
+            "lines": "43"
+        },
+        {
+            "label": "2025-11-12_13-57-03",
+            "content": "@@ -1406,19 +1406,13 @@\n     \n-lap.inserir\n+print\n (gra\n",
+            "lines": "52"
+        },
+        {
+            "label": "2025-11-12_14-01-51",
+            "content": "@@ -1423,198 +1423,8 @@\n ra)%0A\n-            if lap is None:%0A                print(%22fail: lapiseira n%C3%A3o iniciada%22)%0A            elif not lap.inserir(gra):%0A                print(%22fail: calibre incompativel%22)%0A                %0A\n main\n",
+            "lines": "52"
+        },
+        {
+            "label": "2025-11-12_14-03-49",
+            "content": "@@ -1589,15 +1589,31 @@\n mpat\n-%C3%AD\n+i\n vel%22)%0A\n+                \n %0Amai\n",
+            "lines": "57"
+        },
+        {
+            "label": "2025-11-12_14-04-00",
+            "content": "@@ -1390,16 +1390,45 @@\n amanho)%0A\n+            lap.inserir(gra)%0A\n         \n",
+            "lines": "57"
+        },
+        {
+            "label": "2025-11-12_14-04-32",
+            "content": "@@ -1353,17 +1353,16 @@\n      gra\n-f\n  = Grafi\n@@ -1508,17 +1508,16 @@\n erir(gra\n-f\n ):%0A     \n",
+            "lines": "56"
+        },
+        {
+            "label": "2025-11-12_14-06-36",
+            "content": "@@ -814,16 +814,35 @@\n tivel%22)%0A\n+            return%0A\n         \n@@ -1353,16 +1353,17 @@\n      gra\n+f\n  = Grafi\n@@ -1509,16 +1509,17 @@\n erir(gra\n+f\n ):%0A     \n",
+            "lines": "56"
+        },
+        {
+            "label": "2025-11-12_14-08-03",
+            "content": "@@ -752,19 +752,19 @@\n ibre != \n-gra\n+sel\n f.calibr\n",
+            "lines": "55"
+        },
+        {
+            "label": "2025-11-12_14-11-16",
+            "content": "@@ -806,17 +806,18 @@\n  incompa\n-%C3%AD\n+ti\n vel%22)%0A  \n",
+            "lines": "55"
+        },
+        {
+            "label": "2025-11-12_14-11-42",
+            "content": "@@ -802,25 +802,24 @@\n ibre incompa\n-t\n %C3%ADvel%22)%0A     \n",
+            "lines": "55"
+        },
+        {
+            "label": "2025-11-12_14-12-01",
+            "content": "@@ -818,33 +818,8 @@\n l%22)%0A\n-            return False%0A\n     \n@@ -869,32 +869,8 @@\n af)%0A\n-            return True%0A\n %0A%0Ade\n",
+            "lines": "55"
+        },
+        {
+            "label": "2025-11-12_14-12-56",
+            "content": "@@ -727,17 +727,8 @@\n ite)\n- -%3E bool \n :%0A  \n@@ -766,16 +766,64 @@\n alibre:%0A\n+            print(%22fail: calibre incompat%C3%ADvel%22)%0A\n         \n@@ -844,17 +844,29 @@\n se%0A     \n-%0A\n+   else:%0A    \n         \n@@ -890,16 +890,20 @@\n d(graf)%0A\n+    \n         \n@@ -1368,15 +1368,240 @@\n gs%5B3%5D)%0A%0A\n+            gra = Grafite(calibre, dureza, tamanho)%0A            if lap is None:%0A                print(%22fail: lapiseira n%C3%A3o iniciada%22)%0A            elif not lap.inserir(gra):%0A                print(%22fail: calibre incompat%C3%ADvel%22)%0A\n %0Amain()\n",
+            "lines": "57"
+        },
+        {
+            "label": "2025-11-12_14-18-01",
+            "content": "@@ -1317,235 +1317,8 @@\n %5D)%0A%0A\n-            gra = Grafite(calibre, dureza, tamanho)%0A            if lap is None:%0A                print(%22fail lapiseira n%C3%A3o foi iniciada%22)%0A            elif not lap.inserir(gra):%0A                print(%22fail: calibre incompat%C3%ADvel%22)\n %0Amai\n",
+            "lines": "51"
+        },
+        {
+            "label": "2025-11-12_14-22-07",
+            "content": "@@ -605,17 +605,16 @@\n  f%22%3C\n-%5B\n %7Btambor%7D\n %5D%3E%22%0A\n@@ -609,17 +609,16 @@\n %7Btambor%7D\n-%5D\n %3E%22%0A     \n",
+            "lines": "55"
+        },
+        {
+            "label": "2025-11-12_14-22-29",
+            "content": "@@ -601,24 +601,25 @@\n or = f%22%3C\n+%5B\n %7Btambor%7D\n %3E%22%0A     \n@@ -610,16 +610,17 @@\n %7Btambor%7D\n+%5D\n %3E%22%0A     \n",
+            "lines": "55"
+        },
+        {
+            "label": "2025-11-12_14-22-36",
+            "content": "@@ -680,17 +680,16 @@\n or: \n-%5B\n %7Btambor%7D\n %5D%22%0A%0A\n@@ -684,17 +684,16 @@\n %7Btambor%7D\n-%5D\n %22%0A%0A    d\n",
+            "lines": "55"
+        },
+        {
+            "label": "2025-11-12_14-23-21",
+            "content": "@@ -676,24 +676,25 @@\n tambor: \n+%5B\n %7Btambor%7D\n %22%0A%0A    d\n@@ -685,16 +685,17 @@\n %7Btambor%7D\n+%5D\n %22%0A%0A    d\n",
+            "lines": "55"
+        },
+        {
+            "label": "2025-11-12_14-23-41",
+            "content": "@@ -208,16 +208,25 @@\n eturn f%22\n+calibre: \n %7Bself.ca\n@@ -232,16 +232,25 @@\n alibre%7D:\n+ dureza: \n %7Bself.du\n@@ -255,16 +255,26 @@\n dureza%7D:\n+ tamanho: \n %7Bself.ta\n",
+            "lines": "55"
+        },
+        {
+            "label": "2025-11-12_14-26-32",
+            "content": "@@ -208,17 +208,16 @@\n eturn f%22\n-%5B\n %7Bself.ca\n@@ -251,17 +251,16 @@\n tamanho%7D\n-%5D\n %22%0A%0Aclass\n",
+            "lines": "55"
+        },
+        {
+            "label": "2025-11-12_14-26-59",
+            "content": "class Grafite:\n    def __init__(self, calibre: float, dureza: str, tamanho: int):\n        self.calibre = calibre\n        self.dureza = dureza \n        self.tamanho = tamanho\n\n    def __str__(self):\n        return f\"[{self.calibre}:{self.dureza}:{self.tamanho}]\"\n\nclass Lapiseira:\n    def __init__(self, calibre: float):\n        self.calibre = calibre\n        self.bico: Grafite | None = None\n        self.tambor: list[Grafite] = []\n\n    def __str__(self):\n        bico = str(self.bico) if self.bico else \"[]\"\n        tambor = \"\".join(str(g)for g in self.tambor)\n        tambor = f\"<{tambor}>\"\n        return f\"calibre: {self.calibre}, bico: {bico}, tambor: {tambor}\"\n\n    def inserir(self, graf: Grafite) -> bool :\n        if self.calibre != graf.calibre:\n            return False\n     \n        self.tambor.append(graf)\n        return True\n\n\ndef main():\n    lap = None\n\n    while True:\n        line = input()\n        print(\"$\"+line)\n        args = line.split()\n\n        if args[0] == \"end\":\n            break\n        elif args[0] == \"show\":\n            print(lap)\n        elif args[0] == \"init\":\n            z = float(args[1])\n            lap = Lapiseira(z)\n        elif args[0] == \"insert\":\n            calibre = float(args[1])\n            dureza = args[2]\n            tamanho = int(args[3])\n\n            gra = Grafite(calibre, dureza, tamanho)\n            if lap is None:\n                print(\"fail lapiseira n\u00e3o foi iniciada\")\n            elif not lap.inserir(gra):\n                print(\"fail: calibre incompat\u00edvel\")\nmain()",
+            "lines": "55"
+        }
+    ]
+}
