@@ -1,0 +1,64 @@
+{
+    "patches": [
+        {
+            "label": "2025-11-18_01-07-21",
+            "content": "@@ -113,664 +113,4 @@\n     \n-def getname(self):%0A        return self.name%0A    %0A    def getage(self):%0A        return self.age%0A    %0A    def setname(self, name: str):%0A        self.name = name%0A%0A    def setage(self, age: str):%0A        self.age = age%0A%0A    def __str__(self) -%3E str:%0A        return f%22%7Bself.name%7D:%7Bself.age%7D%22%0A%0Aclass Trampolim:%0A    def __init__(self):%0A        self.brincando: list%5BMuleke%5D = %5B%5D%0A        self.perando: list%5BMuleke%5D = %5B%5D%0A%0A    %0A%0A%0A%0A%0Adef main():%0A    jump = Trampolim()%0A%0A    while True:%0A        line = input()%0A        print(%22$%22+line)%0A        args = line.split()%0A%0A        if args%5B0%5D == %22end%22:%0A            break%0A        elif args%5B0%5D == %22show%22:%0A            print(jump)%0A        \n",
+            "lines": "6"
+        },
+        {
+            "label": "2025-11-18_01-22-47",
+            "content": "@@ -395,17 +395,16 @@\n lf.age%7D%22\n- \n %0A%0Aclass \n",
+            "lines": "43"
+        },
+        {
+            "label": "2025-11-18_01-22-55",
+            "content": "@@ -530,74 +530,10 @@\n     \n-def arrive(self, kid: Muleke):%0A        self.perando.insert(0, kid)\n+%0A%0A\n %0A%0A%0Ad\n@@ -774,140 +774,4 @@\n     \n-elif args%5B0%5D == %22arrive%22:%0A            c  = args%5B1%5D%0A            r = int(args%5B2%5D)%0A            jump.arrive(Muleke(c, r))%0A        %0A%0A        \n",
+            "lines": "43"
+        },
+        {
+            "label": "2025-11-18_01-26-43",
+            "content": "@@ -952,22 +952,17 @@\n (c, r))%0A\n-main()\n+ \n        %0A\n",
+            "lines": "48"
+        },
+        {
+            "label": "2025-11-18_01-26-59",
+            "content": "@@ -526,150 +526,8 @@\n %5B%5D%0A%0A\n-    def __str__(self):%0A        wait = %22, %22.join(str(x)for x in self.waiting)%0A        brinca = %22, %22.join(str(x).join for x in self.brincando)%0A%0A\n     \n",
+            "lines": "48"
+        },
+        {
+            "label": "2025-11-18_01-32-30",
+            "content": "@@ -590,23 +590,23 @@\n in self.\n-perando\n+waiting\n )%0A      \n",
+            "lines": "52"
+        },
+        {
+            "label": "2025-11-18_01-33-00",
+            "content": "@@ -535,39 +535,32 @@\n ef __str__(self)\n- -%3E str\n :%0A        wait =\n@@ -624,32 +624,38 @@\n %22, %22.join(str(x)\n+.join \n for x in self.br\n@@ -666,58 +666,8 @@\n ndo)\n-%0A        %0A        return f%22%5B%7Bwait%7D%5D =%3E %5B%7Bbrinca%7D%5D%22\n %0A%0A  \n",
+            "lines": "52"
+        },
+        {
+            "label": "2025-11-18_01-34-45",
+            "content": "@@ -791,144 +791,8 @@\n d)%0A%0A\n-    def enter(self):%0A        if self.brincando %3E 0:%0A            puto = self.brincando.pop(-1)%0A            self.perando.insert(0, puto)%0A%0A\n %0Adef\n@@ -1149,66 +1149,8 @@\n r))%0A\n-        elif args%5B0%5D == %22enter%22:%0A            jump.enter()%0A\n main\n",
+            "lines": "54"
+        },
+        {
+            "label": "2025-11-18_01-39-27",
+            "content": "@@ -823,12 +823,8 @@\n  if \n-ken(\n self\n@@ -833,17 +833,16 @@\n rincando\n-)\n  %3E 0:%0A  \n",
+            "lines": "61"
+        },
+        {
+            "label": "2025-11-18_01-41-26",
+            "content": "@@ -819,17 +819,17 @@\n      if \n-l\n+k\n en(self.\n",
+            "lines": "61"
+        },
+        {
+            "label": "2025-11-18_01-47-12",
+            "content": "@@ -566,16 +566,17 @@\n   wait =\n+ \n %22, %22.joi\n@@ -622,16 +622,17 @@\n brinca =\n+ \n %22, %22.joi\n@@ -812,62 +812,8 @@\n f):%0A\n-        if len(self.perando) == 0:%0A            return%0A\n     \n@@ -856,17 +856,20 @@\n         \n-s\n+puto\n  = self.\n@@ -874,33 +874,34 @@\n f.brincando.pop(\n-0\n+-1\n )%0A            se\n@@ -915,104 +915,23 @@\n ndo.\n-append(s)%0A            %0A            e = self.perando.pop(0)%0A            self.brincando.append(e)%0A\n+insert(0, puto)\n %0A%0A%0Ad\n",
+            "lines": "61"
+        },
+        {
+            "label": "2025-11-18_01-56-32",
+            "content": "class Muleke:\n    def __init__(self, name: str, age: str):\n        self.name = name\n        self.age = age\n    \n    def getname(self):\n        return self.name\n    \n    def getage(self):\n        return self.age\n    \n    def setname(self, name: str):\n        self.name = name\n\n    def setage(self, age: str):\n        self.age = age\n\n    def __str__(self) -> str:\n        return f\"{self.name}:{self.age}\" \n\nclass Trampolim:\n    def __init__(self):\n        self.brincando: list[Muleke] = []\n        self.perando: list[Muleke] = []\n\n    def __str__(self) -> str:\n        wait =\", \".join(str(x)for x in self.perando)\n        brinca =\", \".join(str(x)for x in self.brincando)\n        \n        return f\"[{wait}] => [{brinca}]\"\n\n    def arrive(self, kid: Muleke):\n        self.perando.insert(0, kid)\n\n    def enter(self):\n        if len(self.perando) == 0:\n            return\n        if len(self.brincando) > 0:\n            s = self.brincando.pop(0)\n            self.perando.append(s)\n            \n            e = self.perando.pop(0)\n            self.brincando.append(e)\n\n\n\ndef main():\n    jump = Trampolim()\n\n    while True:\n        line = input()\n        print(\"$\"+line)\n        args = line.split()\n\n        if args[0] == \"end\":\n            break\n        elif args[0] == \"show\":\n            print(jump)\n        elif args[0] == \"arrive\":\n            c  = args[1]\n            r = int(args[2])\n            jump.arrive(Muleke(c, r))\n        elif args[0] == \"enter\":\n            jump.enter()\nmain()       \n\n        ",
+            "lines": "67"
+        }
+    ]
+}
