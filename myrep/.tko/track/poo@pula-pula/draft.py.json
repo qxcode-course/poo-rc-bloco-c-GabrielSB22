@@ -57,8 +57,73 @@
         },
         {
             "label": "2025-11-18_01-56-32",
-            "content": "class Muleke:\n    def __init__(self, name: str, age: str):\n        self.name = name\n        self.age = age\n    \n    def getname(self):\n        return self.name\n    \n    def getage(self):\n        return self.age\n    \n    def setname(self, name: str):\n        self.name = name\n\n    def setage(self, age: str):\n        self.age = age\n\n    def __str__(self) -> str:\n        return f\"{self.name}:{self.age}\" \n\nclass Trampolim:\n    def __init__(self):\n        self.brincando: list[Muleke] = []\n        self.perando: list[Muleke] = []\n\n    def __str__(self) -> str:\n        wait =\", \".join(str(x)for x in self.perando)\n        brinca =\", \".join(str(x)for x in self.brincando)\n        \n        return f\"[{wait}] => [{brinca}]\"\n\n    def arrive(self, kid: Muleke):\n        self.perando.insert(0, kid)\n\n    def enter(self):\n        if len(self.perando) == 0:\n            return\n        if len(self.brincando) > 0:\n            s = self.brincando.pop(0)\n            self.perando.append(s)\n            \n            e = self.perando.pop(0)\n            self.brincando.append(e)\n\n\n\ndef main():\n    jump = Trampolim()\n\n    while True:\n        line = input()\n        print(\"$\"+line)\n        args = line.split()\n\n        if args[0] == \"end\":\n            break\n        elif args[0] == \"show\":\n            print(jump)\n        elif args[0] == \"arrive\":\n            c  = args[1]\n            r = int(args[2])\n            jump.arrive(Muleke(c, r))\n        elif args[0] == \"enter\":\n            jump.enter()\nmain()       \n\n        ",
+            "content": "@@ -1472,17 +1472,16 @@\n .enter()\n- \n %0Amain() \n",
             "lines": "67"
+        },
+        {
+            "label": "2025-11-18_13-11-41",
+            "content": "@@ -839,26 +839,168 @@\n do) \n-%3E 0:%0A            k\n+== 0:%0A            return%0A        if len(self.brincando) %3E 0:%0A            s = self.brincando.pop(0)%0A            self.perando.append(s)%0A            %0A            e\n  = s\n@@ -1019,10 +1019,9 @@\n pop(\n--1\n+0\n )%0A  \n@@ -1049,16 +1049,16 @@\n ndo.\n-pop(0, k\n+append(e\n )%0A%0A%0A\n",
+            "lines": "67"
+        },
+        {
+            "label": "2025-11-18_13-15-59",
+            "content": "@@ -839,168 +839,26 @@\n do) \n-== 0:%0A            return%0A        if len(self.brincando) %3E 0:%0A            s = self.brincando.pop(0)%0A            self.perando.append(s)%0A            %0A            e\n+%3E 0:%0A            k\n  = s\n@@ -873,17 +873,18 @@\n ndo.pop(\n-0\n+-1\n )%0A      \n@@ -908,16 +908,16 @@\n ndo.\n-append(e\n+pop(0, k\n )%0A%0A%0A\n@@ -1331,16 +1331,17 @@\n .enter()\n+ \n %0Amain() \n",
+            "lines": "62"
+        },
+        {
+            "label": "2025-11-18_13-16-32",
+            "content": "@@ -817,16 +817,20 @@\n      if \n+len(\n self.per\n@@ -833,16 +833,22 @@\n .perando\n+) == 0\n :%0A      \n@@ -857,19 +857,72 @@\n     \n-kid\n+return%0A        if len(self.brincando) %3E 0:%0A            s\n  = self.\n pera\n@@ -913,27 +913,29 @@\n    s = self.\n-per\n+brinc\n ando.pop()%0A \n@@ -931,16 +931,17 @@\n ndo.pop(\n+0\n )%0A      \n@@ -955,82 +955,110 @@\n elf.\n-brincando.insert(0, kid)%0A        else:%0A            print(%22N%C3%A3o tem ninguem%22\n+perando.append(s)%0A            %0A            e = self.perando.pop(0)%0A            self.brincando.append(e\n )%0A%0A%0A\n",
+            "lines": "67"
+        },
+        {
+            "label": "2025-11-19_19-23-18",
+            "content": "@@ -966,145 +966,8 @@\n %22)%0A%0A\n-    def leave(self):%0A        if len(self.brincando) %3E 0:%0A            kid = self.brincando.pop()%0A            self.perando.insert(0, kid)%0A%0A\n %0A%0Ade\n@@ -1383,26 +1383,8 @@\n r()%0A\n-        elif args%0A\n main\n",
+            "lines": "64"
+        },
+        {
+            "label": "2025-11-19_19-32-31",
+            "content": "@@ -1537,48 +1537,8 @@\n args\n-%5B0%5D == %22leave%22:%0A            jump.leave()\n %0Amai\n",
+            "lines": "70"
+        },
+        {
+            "label": "2025-11-19_19-32-56",
+            "content": "@@ -1103,449 +1103,8 @@\n d)%0A%0A\n-    def removerdalista(self, name: str, list_m: list%5BMuleke%5D) -%3E Muleke %7C None:%0A        for i, m in enumerate(list_m):%0A            if m.getname() == name:%0A                return list_m.pop(i)%0A            return None%0A        %0A    def removermuleke(self, name: str) -%3E Muleke %7C None:%0A        kid = self.removerdalista(name, self.perando)%0A        if kid is None:%0A            return kid%0A        return self.removerdalista(name, self.brincando)%0A%0A\n %0A%0Ade\n",
+            "lines": "71"
+        },
+        {
+            "label": "2025-11-19_19-46-28",
+            "content": "@@ -2019,184 +2019,8 @@\n e()%0A\n-        elif args%5B0%5D == %22remove%22:%0A            p = args%5B1%5D%0A            k = jump.removermuleke(p)%0A            if k is None:%0A                print(f%22fail %7Bp%7D n%C3%A3o est%C3%A1 brincando%22)%0A\n main\n",
+            "lines": "83"
+        },
+        {
+            "label": "2025-11-19_19-55-40",
+            "content": "@@ -1457,12 +1457,8 @@\n  is \n-not \n None\n",
+            "lines": "88"
+        },
+        {
+            "label": "2025-11-19_19-59-01",
+            "content": "@@ -2187,20 +2187,17 @@\n st%C3%A1 \n-no pula-pula\n+brincando\n %22)%0Am\n",
+            "lines": "88"
+        },
+        {
+            "label": "2025-11-19_19-59-34",
+            "content": "@@ -2179,15 +2179,15 @@\n p%7D n\n-a\n+%C3%A3\n o est\n-a\n+%C3%A1\n  no \n",
+            "lines": "88"
+        },
+        {
+            "label": "2025-11-19_19-59-54",
+            "content": "@@ -2169,17 +2169,16 @@\n t(f%22fail\n-:\n  %7Bp%7D nao\n",
+            "lines": "88"
+        },
+        {
+            "label": "2025-11-19_20-00-12",
+            "content": "@@ -1295,24 +1295,28 @@\n (i)%0A        \n+    \n return None%0A\n",
+            "lines": "88"
+        },
+        {
+            "label": "2025-11-19_20-07-25",
+            "content": "class Muleke:\n    def __init__(self, name: str, age: str):\n        self.name = name\n        self.age = age\n    \n    def getname(self):\n        return self.name\n    \n    def getage(self):\n        return self.age\n    \n    def setname(self, name: str):\n        self.name = name\n\n    def setage(self, age: str):\n        self.age = age\n\n    def __str__(self) -> str:\n        return f\"{self.name}:{self.age}\" \n\nclass Trampolim:\n    def __init__(self):\n        self.brincando: list[Muleke] = []\n        self.perando: list[Muleke] = []\n\n    def __str__(self) -> str:\n        wait =\", \".join(str(x)for x in self.perando)\n        brinca =\", \".join(str(x)for x in self.brincando)\n        \n        return f\"[{wait}] => [{brinca}]\"\n\n    def arrive(self, kid: Muleke):\n        self.perando.insert(0, kid)\n\n    def enter(self):\n        if self.perando:\n            kid = self.perando.pop()\n            self.brincando.insert(0, kid)\n        else:\n            print(\"N\u00e3o tem ninguem\")\n\n    def leave(self):\n        if len(self.brincando) > 0:\n            kid = self.brincando.pop()\n            self.perando.insert(0, kid)\n\n    def removerdalista(self, name: str, list_m: list[Muleke]) -> Muleke | None:\n        for i, m in enumerate(list_m):\n            if m.getname() == name:\n                return list_m.pop(i)\n        return None\n        \n    def removermuleke(self, name: str) -> Muleke | None:\n        kid = self.removerdalista(name, self.perando)\n        if kid is not None:\n            return kid\n        return self.removerdalista(name, self.brincando)\n\n\n\ndef main():\n    jump = Trampolim()\n\n    while True:\n        line = input()\n        print(\"$\"+line)\n        args = line.split()\n\n        if args[0] == \"end\":\n            break\n        elif args[0] == \"show\":\n            print(jump)\n        elif args[0] == \"arrive\":\n            c  = args[1]\n            r = int(args[2])\n            jump.arrive(Muleke(c, r))\n        elif args[0] == \"enter\":\n            jump.enter()\n        elif args[0] == \"leave\":\n            jump.leave()\n        elif args[0] == \"remove\":\n            p = args[1]\n            k = jump.removermuleke(p)\n            if k is None:\n                print(f\"fail: {p} nao esta no pula-pula\")\nmain()       \n\n        ",
+            "lines": "88"
         }
     ]
 }

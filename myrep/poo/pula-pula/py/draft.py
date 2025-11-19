@@ -33,14 +33,28 @@ class Trampolim:
         self.perando.insert(0, kid)
 
     def enter(self):
-        if len(self.perando) == 0:
-            return
+        if self.perando:
+            kid = self.perando.pop()
+            self.brincando.insert(0, kid)
+        else:
+            print("Não tem ninguem")
+
+    def leave(self):
         if len(self.brincando) > 0:
-            s = self.brincando.pop(0)
-            self.perando.append(s)
-            
-            e = self.perando.pop(0)
-            self.brincando.append(e)
+            kid = self.brincando.pop()
+            self.perando.insert(0, kid)
+
+    def removerdalista(self, name: str, list_m: list[Muleke]) -> Muleke | None:
+        for i, m in enumerate(list_m):
+            if m.getname() == name:
+                return list_m.pop(i)
+        return None
+        
+    def removermuleke(self, name: str) -> Muleke | None:
+        kid = self.removerdalista(name, self.perando)
+        if kid is not None:
+            return kid
+        return self.removerdalista(name, self.brincando)
 
 
 
@@ -62,6 +76,13 @@ def main():
             jump.arrive(Muleke(c, r))
         elif args[0] == "enter":
             jump.enter()
+        elif args[0] == "leave":
+            jump.leave()
+        elif args[0] == "remove":
+            p = args[1]
+            k = jump.removermuleke(p)
+            if k is None:
+                print(f"fail: {p} nao esta no pula-pula")
 main()       
 
         
